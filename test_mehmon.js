@@ -71,29 +71,3 @@ const fs = require("fs");
   }
 })();
 
-// await driver.get("https://emehmon.uz/listovka");
-
-// const id_citizen = await driver.findElement(By.id("id_citizen"));
-// await id_citizen.sendKeys("UZBEKISTAN (UZB)");
-
-// const id_passporttype = await driver.findElement(By.id("id_passporttype"));
-// await id_passporttype.sendKeys("ID карта");
-
-// const datebirth = await driver.findElement(By.id("datebirth"));
-// await datebirth.sendKeys("02/09/2005");
-
-// const passportNumber = await driver.findElement(By.id("passportNumber"));
-// await passportNumber.sendKeys("AD0977558");
-
-// await driver.executeScript(
-//   "window.open('https://emehmon.uz/listovka', '_blank');"
-// );
-
-// const handles = await driver.getAllWindowHandles();
-
-// await driver.switchTo().window(handles[1]);
-
-// const someElement = await driver.findElement(By.id("someElementId"));
-// await someElement.click();
-
-// await driver.switchTo().window(handles[0]);
