@@ -1,1 +1,1 @@
-npx mocha test_mehmon.js(file_name) - to run nodejs
+npx mocha timetable.js(file_name) - to run nodejs

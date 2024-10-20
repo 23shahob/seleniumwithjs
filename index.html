@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selenium Test Trigger</title>
+  </head>
+  <body>
+    <div
+      style="
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+        "
+      >
+        <h1
+          style="
+            text-align: center;
+            font-size: 34px;
+            font-weight: 600;
+            padding: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          Selenium Test Page
+        </h1>
+        <button
+          id="runTest"
+          style="
+            width: 250px;
+            padding: 8px 20px;
+            border: 1px solid green;
+            border-radius: 30px;
+            background: transparent;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            background: green;
+            box-shadow: 6px 6px 8px gray;
+          "
+        >
+          Run Selenium Test
+        </button>
+      </div>
+    </div>
+    <script>
+      document.getElementById("runTest").addEventListener("click", function () {
+        fetch("http://localhost:3000/run-selenium-test", {
+          method: "POST",
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            alert(data.message);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      });
+    </script>
+  </body>
+</html>
